@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!-- Created by Professor Wergeles for CS2830 at the Univeristy of Missouri --> 	
+<html>
+	<head>
+		<meta charset="UTF-8"> 
+		<title>CSS Kombat</title>
+		<link rel="stylesheet" type="text/css" href="css/stage.css">
+			
+		<style>
+		    
+            /* Sonya tries some defense */
+			img#sonya {
+				visibility: visible;
+			}
+		
+		    /* and then attack mileena with a class and a two type selector */
+			span.attack img {
+				width: 0%;
+			}
+		
+		    /* mileena attempts to recover with a class and a one type selector */
+			img.recover {
+				width: 100%;
+			}
+		
+		    /* mileena attacks with an ID */
+			#sonya {
+				visibility: hidden;
+			}
+		
+            /*
+            
+                Winnder = Sonya
+            
+                A class with two type selector is more specific than a class with one type selector
+            
+                Type + ID selector is more specific over just an ID
+            
+            */
+            
+		</style>
+	</head>
+	<body>
+		<h2>CSS Mortal Kombat!</h2>
+		<div id="arena">
+			<div><img id="sonya" src="images/SonyaBlade2.png" alt="sonya"></div> 
+		
+			<div><span class="attack">
+				<img id="mileena" class="recover" src="images/mileena.png" alt="mileena">
+			</span></div> 
+		</div>
+	</body>
+</html>

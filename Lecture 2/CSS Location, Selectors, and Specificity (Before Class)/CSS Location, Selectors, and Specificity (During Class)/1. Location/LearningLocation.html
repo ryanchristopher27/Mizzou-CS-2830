@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<!--
+    Ryan Christopher
+    Date: August 31, 2020
+    The main purpose is to show the possible locations of style sheets and to show each one has a priority
+-->
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Learning CSS Location</title>
+        
+        <!-- Whichever style is the most recent in the code is the one that gets applied --> 
+        <!-- External Stylesheet -->
+        <link rel="stylesheet" type="text/css" href="LearningLocation.css">
+        
+        <!-- Internal Stylesheet -->
+        <style>
+            /* Comment in css */
+            h1 {
+                text-align: center;
+                color: orange;
+            }
+        </style>
+    </head>
+    <body>
+        <!--
+            All HTML elements can have attributes
+            
+            *attributes provide addtional information about an element
+
+            *attributes are always specified in the start tag
+
+            *attributes usually come in name/value pairs like: name="value"
+        -->
+        <h1 style="color: green;">My First Header</h1>
+    </body>
+</html>

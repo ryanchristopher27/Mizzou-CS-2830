@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!-- Created by Professor Wergeles for CS2830 at the University of Missouri -->
+
+<!-- Reference: http://www.w3schools.com/css/css3_animations.asp -->
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>CSS3 Animations</title>
+	<style>
+        
+        /* webkit addition: chrome, safari, and opera */
+        @-webkit-keyframes roll {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(720deg);
+            }
+        }
+        
+        /* standard syntax */
+        @keyframes roll {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(720deg);
+            }
+        }
+        
+        /* chrome, safari, and opera */
+        @-webkit-keyframes wiggle {
+            0% {
+                transform: rotate(0deg);
+            }
+            20% {
+                transform: rotate(20deg);
+            }
+            40% {
+                transform: rotate(-25deg);
+            }
+            60% {
+                transform: rotate(30deg);
+            }
+            80% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: scale(1.4, 1.4);
+            }
+        }
+        
+        /* standard syntax */
+        @keyframes wiggle {
+            0% {
+                transform: rotate(0deg);
+            }
+            20% {
+                transform: rotate(20deg);
+            }
+            40% {
+                transform: rotate(-25deg);
+            }
+            60% {
+                transform: rotate(30deg);
+            }
+            70% {
+                transform: rotate(0deg);
+            }
+            80% {
+                transform: scale(1.4, 1.4);
+            }
+        }
+        
+        #myFirstAnimation {
+            width: 500px;
+            height: 150px;
+            padding: 10px;
+            border-radius: 30%; 
+            margin: 80px auto;
+            font-size: 2.5em;
+            text-align: center;
+            background-color: orange;
+            color: white;
+            
+            /* chrome, safari, and opera */
+            -webkit-animation: wiggle 2s;
+            /* firing the animation */
+            animation: wiggle 2s;
+        }
+        img {
+            height: 200px;
+            widows: 400px;
+        }
+	</style>
+</head>
+<body>
+	<div id="myFirstAnimation">
+		<p>My First Animation!</p>
+		<img id="myFirstAnimation" src="viper.png" alt="viper">        
+	</div>
+</body>
+</html>

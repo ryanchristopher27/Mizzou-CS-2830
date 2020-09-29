@@ -1,0 +1,73 @@
+<!DOCTYPE html> 
+<!-- Created by Professor Wergeles for CS2830 at the Univeristy of Missouri 
+
+Main Purpose: Use float and clear properties to put divs side by side
+
+--> 
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS Columns Float</title>
+        <style>
+            /*
+                Left physical width =
+                    200px -> content width
+                +   4px   -> border (2px left ,2px right)
+                ----------
+                    204px
+            */
+            #left {
+                float: left;
+                width: 200px;
+                min-height: 250px;
+                border: 2px solid pink;
+            }
+            
+            /*
+                Middle and Right physical width =
+                300px -> content width
+            +     4px -> border (2px left, 2px right)
+            ----------
+                304px
+            */
+            #middle, #right {
+                float: left;
+                width: 300px;
+                min-height: 250px;
+                border: 2px solid purple;
+            }
+            
+            /*
+                Total physical width =
+                    204px -> Left div
+                +   304px -> Middle div
+                +   304px -> Right div
+                ----------
+                    812px
+            */
+            #columns {
+                width: 812px;
+                border: 5px solid powderblue;
+            }
+            
+            /* Note: this is one way to clear the float, but not the best practice */
+            .group {
+                clear: left;
+            }
+            
+            /* Instead use the CSS Clear Hack */
+            .group:after {
+                content: "";
+                clear: both;
+                display: table;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="columns" class="group">
+            <div id="left">Left</div>
+            <div id="middle">Middle</div>
+            <div id="right">Right</div>
+        </div>
+    </body>
+</html>

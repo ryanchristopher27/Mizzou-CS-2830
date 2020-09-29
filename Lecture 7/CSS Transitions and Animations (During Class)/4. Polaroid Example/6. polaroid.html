@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!-- Created by Professor Wergeles for CS2830 at the University of Missouri -->
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>CSS3 Polaroid Example</title>
+	<style>
+        /* web font / CSS3 font */
+        @font-face {
+            font-family: myFont;
+            src: url(fonts/PermanentMarker.ttf);
+        }
+        
+        body {
+            margin: 30px;
+            background-color: #E9E9E9;
+        }
+        .inline {
+            display: inline-block; 
+        }
+        .polaroid {
+            width: 520px;
+            padding: 10px 10px 20px 10px;
+            text-align: center;
+            border: 1px solid #888;
+            background-color: white;
+            font-size: 16pt;
+            
+            /* must be a positioned element to use z-index */
+            position: relative;
+            
+            /* apply the scc3 font */
+            font-family: myFont;
+            
+            /* CSS3 transition */
+            -ms-transition: transform 0.5s;
+            -webkit-transition: transform 0.5s;
+            transition: transform 0.5s;
+        }
+        
+        .polaroid:hover {
+            
+            /* css3 transformation */
+            -ms-transform: rotate(0deg);
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+            
+            /* z-index only works on positioned elements */
+            z-index: 1;
+            
+            /* css3 box shadow */
+            box-shadow: 0 0 100px #555;
+        }
+        
+        .rotateLeft {
+            -ms-transform: rotate(-8deg);
+            -webkit-transform: rotate(-8deg);
+            transform: rotate(-8deg);
+        }
+        .rotateRight {
+            -ms-transform: rotate(7deg);
+            -webkit-transform: rotate(7deg);
+            transform: rotate(7deg);
+        }
+        img {
+            height: 400px;
+            width: 500px; 
+        }
+        
+        
+        @-webkit-keyframes roll {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(1720deg);
+            }
+        }
+        #polaroidSpin:hover {
+            animation: roll 2s;
+        }
+        /* css3 animation */
+        @keyframes roll {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(1720deg);
+            }
+        }
+        #polaroidSpin:hover {
+            -webkit-animation: roll 2s; /*Chrome, safari, and opera */
+            animation: roll 2s; /* standard syntax */
+        }
+        
+	</style>
+</head>
+<body>
+    <div class="inline">
+		<div class="polaroid inline rotateLeft">
+			<img src="images/shanghai2.jpg" alt="pic1">
+        	<h2>Shanghai, China</h2>
+		</div>
+		<div class="polaroid inline rotateRight">
+			<img src="images/golden.jpg" alt="pic2">
+        	<h2>Golden Gate Bridge</h2>
+		</div>
+    	<div class="polaroid inline rotateRight">
+			<img src="images/grand.jpg" alt="pic3">
+        	<h2>Grand Canyon Arizona</h2>
+		</div>
+    	<div id="polaroidSpin" class="polaroid inline rotateLeft">
+			<img src="images/missouri.jpg" alt="pic4">
+        	<h2>Fall In Missouri</h2>
+		</div>
+    </div>
+</body>
+</html>

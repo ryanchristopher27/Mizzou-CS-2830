@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!-- Created by Professor Wergeles for CS2830 at the University of Missouri -->
+<html>
+	<head>
+	   <!-- References: 
+	
+			1) https://www.fontspring.com/support/general/difference-between-desktop-
+				font-and-webfont
+	
+			2) http://www.w3schools.com/cssref/css3_pr_font-face_rule.asp
+		
+			3) https://fonts.google.com/
+	
+			4) http://www.cssfontstack.com/Web-Fonts
+	
+		-->
+		<meta charset="utf-8">
+		<title>CSS3 Web Fonts</title>
+		
+		<style>
+			
+            @font-face {
+                /* Declare the name of the font (we make this value up, you can name it whatever you want) */
+                font-family: myFirstFont;
+                
+                /* and where it's located */
+                src: url(airstream_regular_macroman/Airstream-webfont.ttf);
+                
+                /* you can download thhis font here: https://www.fontsquirrel.com/fonts/airstream */
+            }
+		
+			h1, h2, h4 {
+			   font-family: myFirstFont, "Permanent Marker", fantasy;
+			}
+			.fontSize50 {
+				font-size: 50px; 
+			}
+			.butchermanCaps {
+				font-family: "Butcherman Caps", times;
+				font-size: 50px; 
+			}
+		
+			.bungeeShade {
+				font-family: "Bungee Shade", arial; 
+				font-size: 30px;
+			}
+		
+			.waitingForTheSunrise {
+				font-family: "Waiting for the Sunrise", sans-serif;
+				font-size: 50px; 
+				color: powderblue; 
+			}
+		</style>
+	</head>
+	<body>
+		<div id="content">
+			<h1 class="fontSize50">Lorem Ipsum</h1>
+			<h2>This is one of the coolest text I have seen, I wish they allowed 
+					this in my school email lol.</h2>
+			<h4>I'm Professor Wergeles and I approve this message (Only the H2)</h4>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pretium mollis 
+				tempor. Aliquam sit amet felis lacus. Nam sit amet nibh vel nunc tristique 
+				condimentum eget vitae nunc. Cras convallis tellus vel dolor varius 
+				tincidunt. Suspendisse tincidunt purus id felis tempus tristique. 
+				In hac habitasse platea dictumst. Nullam sed risus vel massa porttitor 
+				fermentum. Nulla sit amet commodo diam. Donec rhoncus mattis elit, nec 
+				tempor eros aliquet vel. Nunc quis ante est. Nulla facilisi. Cras a 
+				lectus metus. Morbi viverra commodo turpis tempor ultricies. Suspendisse 
+				aliquet diam id sem bibendum ornare.</p>
+		</div>
+		<div>
+			<p class="butchermanCaps">your headline is in butcherman caps can you see me? </p>
+			<p class="bungeeShade">This is bungee shade can you see me? </p>
+			<p class="waitingForTheSunrise">This is waiting for the sunrise text, CAN you SEE ME? </p>
+		</div>
+	</body> 
+</html>

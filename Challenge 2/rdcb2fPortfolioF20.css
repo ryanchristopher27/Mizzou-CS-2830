@@ -1,0 +1,146 @@
+/*
+    Name: Ryan Christopher
+    Pawprint: rdcb2f
+    Date: 9/1/2020
+    Challenge: Portfolio F20
+*/
+
+/*
+    CSS File for Challenge 2: Portfolio F20
+*/
+
+/*
+#navBar {
+    
+    background-color: dodgerblue;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    margin: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+    border: 2px solid black;
+    
+}
+
+.navBarName {
+    
+    font-size: 30px;
+    font-family: sans-serif;
+    text-align: center;
+    margin: 10px;
+    color: black;
+
+}
+*/
+#navBar {
+    background-color: dodgerblue;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    margin: 0 auto;
+    border: 2px solid black;
+}
+
+.navBarItem {
+    font-size: 35px;
+    text-align: center;
+    width: 49%;
+    font-family: monospace;
+    
+    float: left;
+}
+
+#navBarLeft {
+    border-right: 4px solid black;
+}
+
+#navBarRight {
+    
+}
+
+.navBarLinks {
+    text-decoration: none;
+    color: black;
+}
+
+div #selfPhoto {
+    
+    max-width: 40%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    border: 2px solid black;
+    z-index: 2;
+    
+}
+
+h3 {
+    
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+    color: black;
+    font-size: 30px;
+    
+}
+
+.mainPara {
+    
+    text-align: center;
+    font-size: 24px;
+    color: darkslategray;
+    position: relative;
+    
+}
+
+body {
+    
+    background-color: lightgray;
+    
+}
+
+.parentButton {
+    
+    text-align: center;
+    
+}
+
+.infoButtons {
+    
+    text-align: center;
+    font-size: 30px;
+    border: 2px solid black;
+    background-color: dodgerblue;
+    color: black;
+    display: inline-block;
+    width: 150px;
+    position: relative;
+
+}
+
+#ResumeButton {
+    
+    bottom: 19px;
+    height: 45px;
+    
+}
+
+#GitHubPhoto {
+    
+    width: 110px;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+}
+
+#LinkedInPhoto {
+    
+    width: 110px;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 45px;
+
+}

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<!-- Created by Professor Wergeles for CS2830 at the University of Missouri -->
+
+<!-- Main Purpose: To show you how to make and style HTML tables --> 
+
+<!-- Note: Prior to the creation of CSS, HTML <table> elements were often used as a method
+			for page layout. This usage has been discouraged sicne HTML4. -->
+<html>
+    <head>
+    	<meta charset="utf-8">
+        <title>HTML Tables</title>
+        <!--
+            References:
+                
+                *** NOTE: The first link is a requried reading for the course, 
+                			read the page and go through all of the examples, 
+                			they are labeled "try it yourself" with a big grean button. 
+                **** 
+                
+                1) http://www.w3schools.com/html/html_tables.asp
+                
+                2) https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table
+                3) https://css-tricks.com/complete-guide-table-element/
+                4) https://css-tricks.com/how-nth-child-works/
+                5) https://css-tricks.com/examples/nth-child-tester/
+                6) https://css-tricks.com/useful-nth-child-recipies/
+                
+                7) http://www.w3.org/TR/html5/tabular-data.html#tabular-data
+        -->
+        <style>
+            
+            #MizzouFootball th, #MizzouFootball td {
+                border: 3px solid black;
+                padding: 10px 20px;
+                font-size: 18pt;
+                height: 50px;
+            }
+            table#MizzouFootball {
+                border: 3px solid black; /* Not needed if going to collapse border */
+                border-collapse: collapse; /* Must be placed on the table element */
+                width: 100%;
+            }
+            
+            /*
+            Structural pseudo-class
+            
+            If you use column or row spans, nth-child does not work as well 
+            
+            #MizzouFootball tr:nth-child(2n+3) {
+                background-color: goldenrod;
+            }
+            #MizzouFootball tr:nth-child(2n) {
+                background-color: darkgray;
+            }
+            
+            
+            #MizzouFootball td:nth-child(even) {
+                text-align: center;
+            }
+            */
+            
+            #MizzouFootball .home {
+                background-color: goldenrod;
+            }
+            #MizzouFootball .away {
+                background-color: darkgray;
+            }
+            
+            #MizzouFootball td:nth-child(4) {
+                text-align: center;
+            }
+            #MizzouFootball td:nth-child(6) {
+                text-align: center;
+            }
+            
+            img.mizzou {
+                width: 100px;
+                height: 100px;
+            }
+            
+            .header {
+                background-color: black;
+            }
+            #text {
+                color: goldenrod;
+                font-size: 36pt;
+            }
+            img {
+                vertical-align: middle;
+            }
+            .final_result {
+                border-radius: 8px;
+                color: #fff;
+                font: italic bold 25px sans-serif;
+                text-transform: uppercase;
+                padding: 8px;
+                text-align: center;
+            }
+            .final_result.win {
+                background: #090;
+            }
+            .final_result.loss {
+                background: #C00;
+            }
+            
+        </style>
+    </head>
+    <body>
+        
+        <table id="MizzouFootball">
+            <tr class="header">
+                <th colspan="6">
+                    <p id="text">
+                        <img class="mizzou" src="images/mizzou.jpg" alt="mizzou">
+                        
+                        Mizzou Football Schedule
+                        
+                        <img class="mizzou" src="images/football.jpg" alt="mizzou">
+                    </p>
+                </th>
+            </tr>
+            <tr>
+                <th colspan="2">Date Time</th>
+                <th>Event</th>
+                <th>Location</th>
+                <th>Team</th>
+                <th>Score</th>
+            </tr>
+            <tr class="away">
+                <td>Sat Sep 3</td>
+                <td>11 AM</td>
+                <td></td>
+                <td>@ West Virginia</td>
+                <td>Mountaineers</td>
+                <td>
+                    <span class="final_result loss">Loss</span> 26 - 11
+                    <img src="images/thumbsdown.jpg" alt="thumbsdown">
+                </td>
+            </tr>
+            <tr class="home">
+                <td>Sat Sep 1</td>
+                <td>3:00 PM</td>
+                <td></td>
+                <td>VS UT Martin</td>
+                <td>Skyhawks</td>
+                <td>
+                    <span class="final_result win">Win</span> 24 - 7
+                    <img src="images/thumbsup.jpg" alt="thumbsup">
+                </td>
+            </tr>
+            <tr class="home">
+                <td>Sat Sep 8</td>
+                <td>6:00 PM</td>
+                <td></td>
+                <td>VS Wyoming</td>
+                <td>Cowboys</td>
+                <td rowspan="6">N/A</td>
+            </tr>
+            <tr class="away">
+                <td>Sat Sep 15</td>
+                <td>6:30 PM</td>
+                <td></td>
+                <td>@ Purdue</td>
+                <td>Boilermakers</td>
+<!--                <td>N/A</td>-->
+            </tr>
+            <tr class="home">
+                <td>Sat Sep 22</td>
+                <td>TBA</td>
+                <td></td>
+                <td>VS Georgia</td>
+                <td>Bulldogs</td>
+<!--                <td>N/A</td>-->
+            </tr>
+            <tr class="away">
+                <td>Sat Oct 6</td>
+                <td>TBA</td>
+                <td></td>
+                <td>@ South Carolina</td>
+                <td>Gamecocks</td>
+<!--                <td>N/A</td>-->
+            </tr>
+            <tr class="away">
+                <td>Sat Oct 13</td>
+                <td>TBA</td>
+                <td></td>
+                <td>@ Alabama</td>
+                <td>Crimson Tide</td>
+<!--                <td>N/A</td>-->
+            </tr>
+            <tr class="home">
+                <td>Sat Oct 20</td>
+                <td>TBA</td>
+                <td>Homecoming</td>
+                <td>VS Memphis</td>
+                <td>Tigers</td>
+<!--                <td>N/A</td>-->
+            </tr>
+        </table>
+    
+    </body>
+</html>

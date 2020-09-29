@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!-- Created by Professor Wergeles for CS2830 at the Univeristy of Missouri 
+
+Main Purpose: is to use displya inline block, which can be used to achieve similar funcitons as previous code, by putting elements side by side
+
+--> 
+<html>
+    <head>
+    	<meta charset="UTF-8">
+        <title>CSS Columns Inline Block</title>
+        
+        <!--
+            Another option, besides floats, to create grid boxes that fills the browser's width and wraps nicely (when the browser is resized) would be inline-block, which makes this even easier than floats.
+
+            Inline block elements are like inline elements but they can have a width and a height
+    
+            Note: Inline block creates 4px of space in-between each div considered as white space, like in between words in microsoft word
+        -->
+        <style>  
+            
+            /*
+                Left physical width =
+                    200px Content width
+                +   4px border (2px left, 2px right)
+                ---------
+                    204px
+            */
+            #left {
+                display: inline-block;
+                width: 200px; 
+                height: 250px; 
+                border: 2px solid pink; 
+                /*margin-right: -2px;*/
+            }
+            
+            /*
+                Middle and Right physical width =
+                    300px Content width
+                +   4px border (2px left, 2px right)
+                ---------
+                    304px
+            */
+            #middle, #right {
+                display: inline-block;
+                width: 300px; 
+                height: 250px; 
+                border: 2px solid purple;
+               /* margin-left: -2px;
+                margin-right: -2px;*/
+            }        
+            
+            /*
+                204px left column
+                304px middle column
+            ------------
+                508px
+                  4px innline block white space(2px left, 2px right)
+            ------------
+                512px
+                304px right column
+            ------------
+                816px
+                4px inline block white space (2px left, 2px right)
+            ------------
+                820px
+            */
+            #columns {
+                width: 820px; 
+                border: 5px solid powderblue; 
+            }   
+            
+            /*notice I don't need ot have the clear for inline block to work */
+            
+            .group:after {
+                content: ""; 
+                display: table; 
+                clear: both; 
+            }
+        </style>
+    </head>
+    <body>
+        <div id="columns" class="group">
+            <div id="left">Left</div>
+            <div id="middle">Middle</div>
+            <div id="right">Right</div>
+        </div>
+    </body>
+</html>

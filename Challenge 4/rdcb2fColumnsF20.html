@@ -1,0 +1,127 @@
+<!--
+    Name: Ryan Christopher
+    Pawprint: rdcb2f
+    Date: 9 / 10 / 2020
+    Challenge: Multi-Column Layout F20
+
+    Main Purpose: Understand and learn more about multi-column layouts, floats, physical width and calculations, as well as styling my page properly using CSS techniques.
+-->
+
+<!DOCTYPE html>
+<html lang=en>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="rdcb2fColumnsF20.css">
+        <title>rdcb2f Multi-Column Layout F20</title>
+    </head>
+    <body>
+        <div id="navBar" class="clear">
+            
+            <div class="navBarItem">
+                <a href="rdcb2fPortfolioF20.html" target="_blank" class="navBarLinks">Ryan Christopher</a>
+            </div>
+    
+            <div class="navBarItem" id="navBarMiddle">
+                <a href="rdcb2fColumnsF20.html" target="_blank" class="navBarLinks">Skills</a>
+            </div>
+            
+            <div class="navBarItem">
+                <a href="rdcb2fTablesF20.html" target="_blank" class="navBarLinks">Classes Taken</a>
+            </div>
+            
+        </div>
+        
+        <!--Line Breaks to bring the Skills Div below the nav bar-->
+        <br><br><br><br><br>
+        
+        <!-- Main wrapper. This div should wrap all columns, row wrapper, and title header -->
+        <div id="mainWrapper" class="clear">
+            <h3>Skills</h3>
+            
+            <!-- Left Column -->
+            <!-- Put left column physical width calculations here: 
+
+                247px   ->  Content Width
+                 36px   ->  Padding (18px left, 18px right)
+                 36px   ->  Margin (18px left, 18px right)
+             +   14px   ->  Border (7px left, 7px right)
+            ___________
+                333px   ->  Total Physical Width of Left Column
+
+            -->
+            <div class="columns" id="columnLeft">
+                <h5 class="columnHeading">Languages</h5>
+                <hr>
+                <p class="columnPara">
+                    1: C <br>
+                    2: Python <br>
+                    3: HTML
+                </p>
+            </div>
+            
+            <!-- Row Wrapper. This div will contain two rows -->
+            <!--Put middle column physical width calculations here:
+
+                449px   ->  Row Wrapper Content Width
+             +   36px   ->  Margin (18px left, 18px right)
+            ___________
+                485px   ->  Total Physical Width of Middle Column
+
+            -->
+            <div id="RowWrapper">
+                <div class="rows" id="topRow">
+                    <h5 class="columnHeading">Coursework</h5>
+                    <hr>
+                    <p class="columnPara">
+                        1: CS 1000 <br>
+                        2: CS 1050 <br>
+                        3: CS 2050
+                    </p>
+                </div>
+                
+                <div class="rows" id="bottomRow">
+                    <h5 class="columnHeading">Other</h5>
+                    <hr>
+                    <p class="columnPara columnParaOther">
+                        Very Hardworking and Persistant
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Right Column -->
+            <!--Put right column physical width calculations here: 
+
+               1128px   ->  Main Wrapper Width
+            -   333px   ->  Left Column Width
+            ___________
+                795px   ->  Middle & Right Column Width
+            -   485px   ->  Middle Column Width
+            ___________
+                310px   ->  Total Physical Width of Middle Column
+
+                
+                310px
+            -    36px   ->  Padding (18px left, 18px right)
+            -    36px   ->  Margin (18px left, 18px right)
+            -    14px   ->  Border (7px left, 7px right)
+            ___________
+                224px   ->  Content Width of Right Column
+
+            -->
+            <div class="columns" id="columnRight">
+                <h5 class="columnHeading">Technologies</h5>
+                <hr>
+                <p class="columnPara">
+                    1: GitHub <br>
+                    2: VS Code <br>
+                    3: Brackets <br>
+                    4: Atom <br>
+                    5: Google Drive
+                </p>
+            </div>
+        </div>
+        <h4>
+            Last Updated At: &lt;9/12/2020&gt;
+        </h4>
+    </body>
+</html>

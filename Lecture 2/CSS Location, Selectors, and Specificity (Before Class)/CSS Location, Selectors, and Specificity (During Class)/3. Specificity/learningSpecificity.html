@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--
+    Ryan Christopher
+    Date: August 31, 2020
+-->
+
+<!--
+    The main purpose is to demonstrant specificity since CSS priority is based on order and rules
+
+    Generally speaking we can say that all the styles will "cascade" into a new "virtual" style sheet by the following rules, where number 1 has the highest priority:
+        
+        1) Inline styles (inside the HTML element)
+        2) External and Internal Styles (in the head section) (One that is loaded last takes effect)
+        3) Browser default
+
+    So, an inline style (inside a specific HTML element) has the highest priority which means that it will override a style defined inside the <head> section/tag, or an external style sheet, or the browser's default
+-->
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Learning Specificity</title>
+        
+        <!-- External Stylesheet -->
+        <link rel="stylesheet" type="text/css" href="learningSpecificity.css">
+        
+        <!-- Internal Stylesheet -->
+        <style>
+            /* Anything we set overrides default styles */
+            h1 {
+                color: blue;
+                font-weight: normal;
+            }
+            
+            /* Order matters!! If the specificity is equal, the style loaded last will be applied */
+            h1 {
+                color: red;
+            }
+            
+            /* Descendant Combinator */
+            /* Higher Priority and more specific*/
+            body div h1 {
+                color: green;
+            }
+            
+            /* Classes are more specific than all type of selectors */
+            .cool {
+                color: pink;
+            }
+            
+            /* IDs are more specific than classes since IDs must be unique to one element */
+            #header {
+                color: orange;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <!-- Inline styles are applied last and have the highest priority -->
+            <h1 id="header" class="cool" style="color: purple;">Specificity determines what CSS is applied</h1>
+        </div>
+    </body>
+</html>

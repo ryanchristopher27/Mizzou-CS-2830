@@ -1,0 +1,182 @@
+/*
+    Name: Ryan Christopher
+    Pawprint: rdcb2f
+    Date: 9/17/2020
+    Challenge: Tables F20
+*/
+
+/* Fonts */
+@font-face {
+    font-family: primaryFont;
+    
+    src: url(FontFolder/Mitr/Mitr-Regular.ttf);
+}
+
+/* Nav Bar CSS Items */
+#navBar {
+    background-color: dodgerblue;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    margin: 0 auto;
+    border: 2px solid black;
+}
+
+.navBarItem {
+    font-size: 35px;
+    text-align: center;
+    width: 33%;
+    font-family: monospace;
+    
+    float: left;
+}
+
+#navBarMiddle {
+    border-right: 4px solid black;
+    border-left: 4px solid black;
+}
+
+
+.navBarLinks {
+    text-decoration: none;
+    color: black;
+}
+
+
+/* Table Head Items */
+#Classes th, #Classes td {
+    
+    /*
+    border: 3px solid black;
+    padding: 10px 20px;
+    font-size: 18pt;
+    height: 50px;
+    */
+}
+
+table#Classes {
+    font-family: primaryFont, monospace;
+}
+
+/* Headers */
+.mainHeader {
+    column-span: "7";
+    text-align: center;
+    font-size: 3rem;
+    background-color: steelblue;
+    color: white;
+}
+.schoolHeader {
+    background-color: steelblue;
+    color: white;
+    font-size: 2.5rem;
+    text-align: center;
+}
+.rowHeader {
+    background-color: steelblue;
+    color: white;
+    font-size: 2rem;
+}
+
+#mizPhoto {
+    width: 150px;
+    position: relative;
+    left: 20%;
+}
+#mizTitle {
+    position: relative;
+    right: 20%;
+}
+
+
+.oddRows {
+    background-color: lightblue;
+    font-size: 1.5rem;
+    color: #21326a;
+
+}
+.evenRows {
+    background-color: steelblue;
+    color: white;
+    font-size: 1.5rem;
+}
+
+#departmentGroup1 {
+    background-color: lightblue;
+    font-size: 2rem;
+    color: #21326a;
+}
+#departmentGroup2 {
+    background-color: steelblue;
+    color: white;
+    font-size: 2rem;
+}
+#departmentGroup3 {
+    background-color: #21326a;
+    color: white;
+    font-size: 2rem;
+}
+
+
+/* CSS Card */
+#mainWrapper {
+    border: 5px solid #21326a;
+    width: 50%;
+    margin: 10px auto;
+    padding: 10px;
+    box-shadow: 0 0 30px 20px slategray;
+    background-color: lightblue;
+    
+}
+.columns {
+    width: 30%;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    display: inline-block;
+
+    float: left;
+}
+
+#col1 {
+    
+}
+#col2 {
+
+}
+#col3 {
+
+}
+
+div.columns h3 {
+    font-size: 2rem;
+    color: #21326a;
+    font-family: primaryFont, monospace;
+}
+div.columns p {
+    font-size: 1.5rem;
+    color: #21326a;
+    font-family: primaryFont, monospace;
+}
+
+#selfPhoto {
+    border: 3px solid #21326a;
+    padding: 5px;
+    margin: 10px;
+    width: 90%;
+}
+
+
+/* General CSS Items */
+#bodyID {
+    background-color: lightgray;
+}
+
+
+
+/* Clear Hack */
+.clear:after {
+    content: "";
+    display: table;
+    clear: both;
+}

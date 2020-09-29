@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!-- Created by Professor Wergeles for CS2830 at the University of Missouri -->
+
+<!-- Reference: http://www.w3schools.com/css/css3_transitions.asp -->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>CSS3 Transitions</title>
+        <style>
+            #box {
+                height: 100px;
+                width: 500px; 
+                background-color: lightblue;
+            	
+                /* transitions allow CSS properties to change gracefully */
+                -webkit-transition: width 4s, height 2s, background-color 2s;
+                transition: width 4s, height 2s, background-color 2s;
+                
+                /* we can modify the rate at which this change happens */
+                -webkit-transition-timing-function: linear;
+                transition-timing-function: linear;
+            }
+            
+            #box:hover {
+                height: 400px;
+                width: 100%;
+                background-color: darkblue;
+            }
+            
+            div {
+                width: 100px;
+                height: 100px;
+                background: darkgoldenrod;
+                text-align: center; 
+                
+            	-webkit-transition: width 3s, background-color 2s;
+                transition: width 3s, background-color 2s;
+            }
+            
+            #div1 {-webkit-transition-timing-function: linear;}
+            #div2 {-webkit-transition-timing-function: ease;}
+            #div3 {-webkit-transition-timing-function: ease-in;}
+            #div4 {-webkit-transition-timing-function: ease-out;}
+            #div5 {-webkit-transition-timing-function: ease-in-out;}
+           
+            #div1 {transition-timing-function: linear;}
+            #div2 {transition-timing-function: ease;}
+            #div3 {transition-timing-function: ease-in;}
+            #div4 {transition-timing-function: ease-out;}
+            #div5 {transition-timing-function: ease-in-out;}
+            
+            div:hover {
+                width: 100%;
+                background-color: darkgray;
+            }
+             
+            .myDiv {
+                width: 100px;
+                height: 100px;
+                background: powderblue;
+                text-align: center; 
+                
+                transition: width 2s, height 2s, transform 0.5s;
+            }
+
+            .myDiv:hover {
+                width: 300px;
+                height: 300px;
+                background-color: yellow; 
+                
+                transform: rotate(360deg);
+            }
+        </style>
+    </head>
+    <body> 
+        <p><b>Note:</b> This example does not work in Internet Explorer 9 and earlier versions.</p>
+        
+        <div id="box"></div>
+        
+        <p>Hover over the div elements above, to see the transition effect.</p>
+        <hr>
+        <p><b>Note:</b> This example does not work in Internet Explorer 9 and earlier versions.</p>
+        
+        <div id="div1">linear</div><br>
+        <div id="div2">ease</div><br>
+        <div id="div3">ease-in</div><br>
+        <div id="div4">ease-out</div><br>
+        <div id="div5">ease-in-out</div><br>
+        
+        <p>Hover over the div elements above, to see the different speed transitions.</p>
+        <hr>
+        <p><b>Note:</b> This example does not work in Internet Explorer 9 and earlier versions.</p>
+        
+        <div class="myDiv">Prof. Wergeles Cool Div</div>
+        
+        <p>Hover over the div element above, to see the transition effect.</p>
+        <br>
+        <br>
+        <br>
+    </body>
+</html>

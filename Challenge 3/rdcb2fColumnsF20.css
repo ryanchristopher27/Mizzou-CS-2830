@@ -1,0 +1,129 @@
+/*  
+    Name: Ryan Christopher
+    Pawprint: rdcb2f
+    Date: 9 / 10 / 2020
+    Challenge: Multi-Column Layout F20
+*/
+
+#mainWrapper {
+    border: 6px solid slategray;
+    width: 1128px;
+    padding: 8px;
+    margin: 10px auto;
+    border-radius: 80px;
+    background-color: lightblue;   
+}
+
+h3 {
+    text-align: center;
+    font-size: 40px;
+    color: slategray;
+    font-family: monospace;
+    margin: 10px;
+}
+
+#RowWrapper {
+    width: 449px;
+    margin: 18px;
+    
+    float: left;
+}
+
+.rows {
+    width: 375px;
+    padding: 25px;
+    border: 7px solid slategray;
+    border-radius: 50px;
+    background-color: white;
+}
+
+#topRow {
+    height: 198px;
+    margin-bottom: 25px;
+}
+
+#bottomRow {
+    height: 132px;
+}
+
+.columns {
+    padding: 18px;
+    margin: 18px;
+    height: 433px;
+    border: 7px solid slategray;
+    border-radius: 50px;
+    background-color: white;
+    
+    float: left;
+}
+
+#columnLeft {
+    width: 247px;
+}
+
+#columnRight {
+    width: 224px;
+}
+
+.columnHeading {
+    text-align: center;
+    font-size: 30px;
+    color: slategray;
+    font-family: monospace;
+    margin: 0px;
+}
+
+hr {
+    border-top: 4px solid slategray;
+}
+
+.columnPara {
+    font-size: 25px;
+    color: slategray;
+    font-family: monospace;
+}
+
+.columnParaOther {
+    text-align: center;
+}
+
+.clear:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#navBar {
+    background-color: dodgerblue;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    margin: 0 auto;
+    border: 2px solid black;
+}
+
+.navBarItem {
+    font-size: 35px;
+    text-align: center;
+    width: 49%;
+    font-family: monospace;
+    
+    float: left;
+}
+
+#navBarLeft {
+    border-right: 4px solid black;
+}
+
+#navBarRight {
+    
+}
+
+.navBarLinks {
+    text-decoration: none;
+    color: black;
+}
+
+body {
+    background-color: lightgray;  
+}

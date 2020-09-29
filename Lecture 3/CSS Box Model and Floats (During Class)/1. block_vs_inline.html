@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!-- Created by Professor Wergeles for CS2830 at the University of Missouri -->
+<html>
+    <head>
+        <title>HTML Block VS Inline</title>
+        <meta charset="UTF-8">
+        <style>
+            h1 {
+                text-align: center; 
+                border: 2px black solid; 
+            }
+            h2 {
+                text-decoration: line-through; 
+                text-align: right; 
+            }
+            p{
+                background-color: yellow; 
+                border: 2px black solid; 
+            }
+            span {
+                border: 1px solid orange; 
+            }
+            div {
+                border: 5px solid blue; 
+            }
+            img {
+                width: 200px; 
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>My first header</h1>
+        </div>
+        
+        <h2>My second header</h2>
+        
+        <p>Hello World</p>
+        
+        <pre>Hello World
+                
+                preformatted text
+                
+                this may be useful later
+        </pre>
+        
+        <!--
+            Inline element inside of a block element
+            The inline element will start and end with a new line. The div (block elenet) will take up the full width but the span (inline element) will only take up the width that is needed. And the reason it starts/ends with a new line is because it's inside the block element
+        -->
+        <div>
+            <span>This is a span</span>
+            <span>This is span number 2</span>
+        </div>
+        <div>outside the span</div>
+        
+        <span>Web Development</span>
+        <span>is fun</span>
+        <span>Third span</span>
+        <span>Fourth span</span>
+        <span>Spans are always in line</span>
+        
+        <!-- putting a block element in between inline elements
+            inline elements were no longer side by side, the element started and ended with a new line forcing inline element to a new line. AFter the block the element acted as normal.
+        -->
+        <p>What happens?</p>
+        
+        <a href="https://www.google.com">This is my first link</a>
+        
+        <!--
+            Block element inside an inline element
+            forces the linline element to have block characteristics
+        -->
+        <span><p>What is happening?</p></span>
+        <span>Hello World</span>
+        <span>Hello World #2</span>
+        
+        
+    </body>
+</html>

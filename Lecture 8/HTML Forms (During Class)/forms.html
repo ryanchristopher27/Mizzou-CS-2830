@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<!-- Created by Professor Wergeles for CS2830 at the University of Missouri -->
+
+<!-- References: 
+
+    1) http://www.w3schools.com/html/html_forms.asp
+    2) http://www.w3schools.com/html/html_form_elements.asp
+    3) http://www.w3schools.com/html/html_form_input_types.asp
+    4) http://www.w3schools.com/html/html_form_attributes.asp
+
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>HTML Form Elements</title>
+        <style>
+            p.center {
+                text-align: center; 
+            }
+            form {
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- By default the form element is not visible to the user -->
+        
+        <!-- Usually the form data will be sent to a server (like a PHP file) -->
+        
+        <!-- Action = Specifies where the data will go -->
+        
+        <!-- Method = is the way it gets there (passed, sent, etc.) -->
+        
+        <form action="#" method="post">
+            <div>
+                <label for="user">Username:</label>
+                <input id="user" type="text" name="username" placeholder="Username" maxlength="10">
+            </div>
+            <div>
+                <label for="password">Password:</label>
+                <input id="password" type="password" name="password">
+            </div>
+            
+            <!-- Each input field must have a name attribute to be submitted -->
+            
+            <!-- If the name attributed is omitted, the data of that input field will not be sent at all -->
+            
+            <h3>What is your favorite dinosaur?</h3>
+            <div>
+                
+                <input id="raptor" type="radio" name="dinosaurs" value="velociraptor">
+                <label for="raptor">Velociraptor</label>
+               
+            </div>
+            <div>
+                
+                <input id="iguanodon" type="radio" name="dinosaurs" value="iguanodon">
+                <label for="iguanodon">Iguanodon</label>
+                
+            </div>
+            <div>
+                <input id="trex" type="radio" name="dinosaurs" value="trex">
+                <label for="trex">Trex</label>
+                
+            </div>
+            
+            
+            <h3>What are your interests?</h3>
+            <div>
+                <input id="Coding" type="checkbox" name="interests[]" value="Coding" checked>
+                <label for="Coding">Coding</label>
+            
+                <br>
+                
+                <input id="sleeping" type="checkbox" name="interests[]" value="sleeping" checked>
+                <label for="sleeping">Sleeping</label>
+            
+                <br>
+                
+                <input id="wakeboarding" type="checkbox" name="interests[]" value="wakeboarding" checked>
+                <label for="wakeboarding">Wake Boarding</label>
+                
+                <br>
+            
+                <input id="skating" type="checkbox" name="interests[]" value="skating">
+                <label for="skating">Skateboarding</label>
+            
+                <br>
+                
+                <input id="Drums" type="checkbox" name="interests[]" value="drums&percussion">
+                <label for="Drums">Drums and Percussion</label>
+                
+            </div>
+            
+            
+            <h3>What do you like to eat?</h3>
+            <select name="foods[]" multiple>
+                <option value="">Please select</option>
+                <option value="pizza">Pizza</option>
+                <option value="padthai">Pad Thai</option>
+                <option value="pannenkoeken">Pannenkoeken</option>
+                <option value="avocado">Avocado</option>
+                <option value="chili" selected>Chili</option>
+            </select>
+            
+            
+            <p>This is a clickable button to do some action</p>
+            <button type="button" onclick="alert('Hello World!')">Click Me!</button>
+            
+            
+            <h3>Comments?</h3>
+            <div>
+                <textarea name="comments" rows="20" cols="40">I like CS2830... 
+                	but my instructor is kinda weird.</textarea>
+            </div>
+            
+            <br><br>
+            
+            <fieldset>
+                <legend>Personal Information: </legend>
+                <div>
+                    <label for="fname">First Name:</label>
+                    <input id="fname" type="text" name="firstname" placeholder="first name" autocomplete="on">
+                </div>
+                <div>
+                     <label for="email">Email:</label>
+                    <input id="email" type="text" name="email" placeholder="email" size="50">
+                </div>
+                <div>
+                    <label for="phoneNumber">Phone:</label>
+                    <input id="phoneNumber" type="text" name="phoneNumber">
+                </div>
+            </fieldset>
+
+            <br><br>
+
+            <div>
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+        
+        <br><hr><br><br>
+        
+        <p>This is a datalist: </p>
+            <input list="browsers">
+            <datalist id="browsers">
+                <option value="Internet Explorer">
+                <option value="Firefox">
+                <option value="Chrome">
+                <option value="Opera">
+                <option value="Safari">
+                <option value="fireworks">fire</option>
+                <option value="Siri">siri</option>
+            </datalist> 
+
+        <br><hr><br><br>
+        
+        <!-- Various HTML form input types and input attributes-->
+        
+        <!-- Reference: http://www.w3schools.com/jsref/event_oninput.asp  -->
+        <form action="action_page.php" oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+            0
+            <input type="range" id="a" name="a" value="50">
+            100 +
+            <input type="number" id="b" name="b" value="50" min="-10" max="100" step="10">
+            =
+            <output name="x" for="a b"></output>
+            
+            <br><br>
+            
+            <input type="submit">
+        </form>
+        
+        <br><hr><br><br>
+        
+        <!-- input type date -->
+        <form>
+            Birthday:
+            <input type="date" name="bday">
+        </form>
+   
+        <p>Depending on browser support:<br>A color picker can pop-up when you enter the input field.</p>
+        
+        <br><hr><br><br>
+
+		<!-- Input type color -->
+        <form action="action_page.php">
+            Select your favorite color:
+            <input type="color" name="favcolor" value="#ff0000">
+            <input type="submit">
+        </form>
+
+        <p><b>Note:</b> type="color" is not supported in Internet Explorer / Edge.</p>
+
+        <p>Depending on browser support:<br>A date picker can pop-up when you enter the input field.</p>
+
+        <br><hr><br><br>
+        
+        <!-- input type DateTime-local 
+        
+        The <input type="datetime-local"> specifies a date and time input field, with no time zone. -->
+        <form action="action_page.php">
+            Birthday (date and time):
+            <input type="datetime-local" name="bdaytime">
+            <input type="submit" value="Send">
+        </form>
+
+        <p><strong>Note:</strong> type="time" is not supported in Firefox, or Internet 
+        	Explorer 10 and earlier versions.</p>
+        
+        <br><hr><br><br>
+        
+        <!-- input type email -->
+        <form>
+            E-mail:
+            <input type="email" name="email">
+            <input type="submit">
+        </form>
+    
+        <br><hr><br><br>
+        
+         <!-- the autocomplete attribute
+        
+        When autocomplete is on, the browser automatically complete the input values 
+        	based on values that the user has entered before.
+        
+        The autocomplete attribute works with <form> and the following <input> types: 
+        	text, search, url, tel, email, password, datepickers, range, and color. -->
+        <form action="action_page.php" autocomplete="on">
+            First name:<input type="text" name="fname" autofocus><br>
+            Last name: <input type="text" name="lname"><br>
+            E-mail: <input type="email" name="email" autocomplete="off"><br>
+            <input type="submit">
+        </form>
+        
+        <p>Fill in and submit the form, then reload the page to see how autocomplete works.</p>
+        <p>Notice that autocomplete is "on" for the form, but "off" for the e-mail field.</p>
+        
+    </body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!-- Created by Professor Wergeles for CS2830 at the Univeristy of Missouri --> 
+<html>
+	<head>
+		<meta charset="UTF-8"> 
+		<title>Selectors</title>
+        <!-- References
+           
+           	1) http://www.w3schools.com/cssref/css_selectors.asp
+    
+            2) http://www.w3.org/TR/css3-selectors/
+            
+        -->
+		<style>
+            
+            /* Universal Selector */
+            * {
+                margin: 10px;
+            }
+            
+            h1 {
+                text-align: center;
+            }
+            
+            h2 {
+                text-align: center;
+            }
+            
+            /*Grouping 2 or more selectors together*/
+            h1, h2 {
+                text-align: center;
+            }
+            
+            /*
+                ID Selector
+            
+                ID's of an element should be unique within a page!!
+                Therefore, the ID selector is used to select one unique element on the page!!
+            */
+            #branding {
+                background-color: lightblue;
+                padding: 10px;
+            }
+            
+            /* Class Selector */
+            .myClass {
+                background-color: yellow;
+            }
+            
+            .wrapper {
+                text-align: center;
+                border: 2px solid black;
+            }
+            
+            /* Specify that only specific html elements should be effected by a class
+            
+            In this example, only <div> elements with class="post" will be effected*/
+            div.post {
+                width: 600px;
+                text-align: justify;
+                text-justify: auto;
+                margin: 20px;
+                display: inline-block;
+                border: 2px solid black;
+                
+            }
+            
+            /* It would be better to be more specific like below using a descendant combinator */  
+            div.post img {
+                width: 200px;
+                height: 150px;
+                
+                /* Use to center photos when text is justified */
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            /* User Action Pseudo-class */
+            /* Only activates when the user hovers the photo */
+            div.post img:hover {
+                box-shadow: 0 0 100px black;
+            }
+            
+            /* 
+            http://www.w3schools.com/css/css_combinators.asp 
+            */
+
+		</style>
+	</head>
+	<body>
+		<h1 id="branding"><img src="images/hang-loose.png" alt="Hang Loose"><br>
+		Professor Wergeles Cool Photo Site</h1>
+
+		<h2 class="myClass">Hillary Clinton or Donald Trump</h2> 
+		
+		<div class="wrapper">
+			<div class="post">
+				<h2>First Photo</h2>
+				<img src="images/donald-hillary.jpg" alt="Donald & Hillary">
+				<p>Hillary Diane Rodham Clinton (born October 26, 1947) is an American politician 
+				and the nominee of the Democratic Party for President of the United States in 
+				the 2016 election. She served as the 67th United States Secretary of State 
+				from 2009 to 2013, the junior United States Senator representing New York 
+				from 2001 to 2009, First Lady of the United States during the presidency 
+				of Bill Clinton from 1993 to 2001, and First Lady of Arkansas during his 
+				governorship from 1979 to 1981 and from 1983 to 1992.</p>
+			</div>
+		
+			<div class="post">
+				<h2>Second Photo</h2>
+				<img src="images/obama.jpg" alt="Obama">
+				<p>Donald John Trump (born June 14, 1946) is an American businessman, 
+				television personality, author, politician, and the Republican Party 
+				nominee for President of the United States in the 2016 election. 
+				He is chairman of The Trump Organization, which is the principal 
+				holding company for his real estate ventures and other business 
+				interests. Born and raised in New York City, Trump received a bachelor's 
+				degree in economics from the Wharton School of the University of 
+				Pennsylvania in 1968.</p>
+			</div>
+		</div> 	
+	</body>
+</html>
