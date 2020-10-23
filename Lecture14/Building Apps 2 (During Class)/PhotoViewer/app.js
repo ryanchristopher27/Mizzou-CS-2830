@@ -52,6 +52,10 @@ var photos = [
 	{
 		uri : '../images/sheep.png',
 		title : 'Flock of Sheep'
+	},
+	{
+		uri : '../images/sheep.png',
+		title : 'Flock of Sheep 2'
 	}
 ];
 
@@ -65,6 +69,46 @@ var photos = [
 // 		Controller = the code below
 // 	https://developer.chrome.com/apps/app_frameworks
 
+function prepareDisplay(photos){
+	$("#title").html(title);
 
+	if (photos.length < 1) return;
 
+	var firstPhoto = photos[0];
+	$("#imageHolder").attr("src", firstPhoto.uri);
+	$("#photoTitle").html(firstPhoto.title);
+}
+
+function displayItem(event){
+	console.dir(event);
+
+	var data = event.data;
+	var item = data.item;
+
+	$("#imageHolder").attr("src", item.uri);
+	$("#photoTitle").html(item.title);
+}
+
+function populateMenu(photos){
+	for (var i=0;i<photos.length;i++) {
+		var item = photos[i];
+
+		var menuItem = $("<li>" + item.title+ "</li>");
+
+		$("#menuItems").append(menuItem);
+
+		var eventData = {
+			'num': i,
+			'item': item
+		};
+
+		menuItem.click(eventData, displayItem);
+	}
+}
+
+$(document).ready(function(){
+	prepareDisplay(photos);
+
+	populateMenu(photos);
+});
 

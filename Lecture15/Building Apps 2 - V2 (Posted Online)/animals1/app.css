@@ -33,16 +33,16 @@ body {
 	height: 300px;
 	background-color: white;
 	border: 2px solid #555;
-    overflow: auto;
+    /* put this in later after #photoMenu li */
+	overflow: auto;
 }
 
 #photoMenu ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
 	font-family: arial, helvetica, sans-serif;
 	font-size: 1em;
-	
-	list-style: none;
-	margin: 0;
-	padding: 0;
 }
 
 #photoMenu li {
@@ -55,19 +55,16 @@ body {
 	background-color: #eeeeee;
 }
 
-
 #photoTitle {
 	position: absolute;
 	top: 15px;
 	left: 300px;
 	width: 450px;
-
 	text-align: center;
 	padding: 0;
 	margin: 0;
 	font-family: arial, helvetica, sans-serif;
 	font-size: 1.2em;
-	
 }
 
 #photoDisplay {
@@ -75,19 +72,17 @@ body {
 	top: 50px;
 	left: 300px;
 	width: 450px;
-
+	height: 300px;
 	background-color: white;
 	border: 2px solid #555;
-	
 }
 
 #imageHolder {
-	width: 450px;
-	height: 300px;
-	
 	display: block;
 	position: absolute;
 	top: 0px;
 	left: 0px;
+	width: 450px;
+	height: 300px;
 	overflow: hidden;
 }
