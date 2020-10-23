@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!-- Created by Professor Wergeles for CS2830 at the University of Missouri -->
+
+<!-- References: 
+		1) http://www.w3schools.com/jquery/event_ready.asp
+		2) http://www.w3schools.com/jquery/jquery_syntax.asp
+		3) http://www.w3schools.com/jquery/jquery_selectors.asp		
+-->
+<html>
+	<head>
+		<title>jQuery Loading</title>
+        <script src="jslibs/jquery-2.1.4.min.js"></script>
+        <script>
+            /*
+                Before we used the <body> element's onload attribute to wait for the document (DOM) to load.
+                
+                Note: This includes waiting for images, scripts, and other assets to download
+            */
+            
+            function pageLoaded() {
+                
+                console.log("body: onload event");
+                            
+                var message = document.getElementById("message");
+                
+                console.dir(message);
+                
+				message.innerHTML = "The DOM has loaded";
+            }
+            
+            // Reference: http://api.jquery.com/ready/
+            
+            // To just wait for the DOM, we can use jQuery's .ready() function
+            $(document).ready(function(){
+                console.log("jQuery: the DOM is ready");
+                
+                // $("#message") returns the jQuery object representing #message
+                var message = $("#message");
+                
+                console.dir(message);
+                
+                // Change the contents of #message to the parameter
+                message.html("jQuery changed this");
+                
+                // $("#message").html("jQuery changed this");
+            });
+            
+        </script>
+	</head>
+    <body onload="pageLoaded()"> 
+<!--    <body>-->
+		<p id="message">Default</p>
+	</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!-- Created by Professor Wergeles for CS2830 at the University of Missouri -->
+		
+<!-- References for intro to Javascript: 
+	
+		1) http://www.w3schools.com/js/default.asp
+		2) http://www.w3schools.com/js/js_intro.asp
+		
+-->
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>JavaScript Location</title>
+		<link rel="stylesheet" type="text/css" href="app.css">
+	    
+        <script>
+            
+            // JavaScript can be located in the <head>
+            console.log("Head: hello");
+            
+            // JavaScript can be displayed through the console and a window alert
+            window.alert("Head: hello");
+            
+        </script>
+        
+        <!-- JavaScript can be linked externally -->
+        <script src="app.js"></script>
+		
+	</head>
+	<body>
+		<div id="animateMe">
+			<p>Do a barrel roll!</p>
+		</div>
+		    
+        <p id="demo"></p>
+        
+        <!-- The document.write() method should only be used for testing -->
+        
+        <!-- Script tags if in the body go at the bottom of the body -->
+        <script>
+            /* Javascript can be in the body */
+        
+            console.log("Body: Hi");
+            
+            window.alert("Body: hello");
+            
+            document.getElementById("demo").innerHTML = "Body: hello";
+        
+        </script>
+             	
+	</body>
+</html>

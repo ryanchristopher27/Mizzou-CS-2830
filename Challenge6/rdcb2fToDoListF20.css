@@ -1,0 +1,209 @@
+/*
+    Name: Ryan Christopher
+    Pawprint: rdcb2f
+    Date: 10/1/2020
+    Challenge: To Do List F20
+
+    CSS File
+*/
+
+
+/* Header Items */
+#mainHeader {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 80px;
+    margin-bottom: 50px;
+    font-family: monospace;
+
+}
+#backLink {
+    height: 80px;
+    font-size: 40px;
+    display: inline;
+    border: 2px solid black;
+    background-color: lightblue;
+    padding: 16px;
+    font-family: monospace;
+    text-decoration: none;
+    color: black;
+    border-radius: 10px;
+}
+#themeButton {
+    height: 85px;
+    width: 300px;
+    font-size: 40px;
+    margin-left: 100px;
+    font-family: monospace;
+    background-color: lightblue;
+    border-radius: 10px;
+}
+
+
+/* To Do List CSS */
+table#todoList {
+    width: 2000px;
+    border-bottom: 5px solid steelblue;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: lightgray;
+    font-family: monospace;
+}
+#tableWrapper {
+    width: 2010px;
+    height: 1000px;
+    border: 5px solid steelblue;
+    background-color: lightblue;
+    border-radius: 10px;
+    
+    padding-top: 5px;
+    margin: 0 auto;
+    overflow: scroll;
+    
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+.tableHeaders {
+    font-size: 3rem;
+}
+.tableHeaderItems {
+    border-bottom: 5px solid steelblue;
+    padding: 30px 0;
+}
+.addedItems {
+    font-size: 2.5rem;
+    text-align: center;
+    border-top: 3px solid steelblue;
+    height: 80px;
+}
+.addTitle {
+    
+}
+.addType {
+    
+}
+.addPriority {
+    
+}
+.addDate {
+    
+}
+.addButton {
+    
+}
+.doneButton {
+    height: 60px;
+    width: 60px;
+    font-size: 55px;
+    background-color: lightblue;
+    padding: 0;
+    border: 0 solid black;
+    margin: 0;
+    background: hidden;
+    border-radius: 10px;
+}
+
+
+/* Form CSS */
+#formWrapper {
+    width: 2010px;
+    height: 300px;
+    position: relative;
+    margin: 10px auto;
+    justify-content: center;
+    border: 5px solid steelblue;
+    background-color: lightblue;
+    border-radius: 10px;
+}
+.formHeader {
+    font-size: 3rem;
+    text-align: center;
+    font-family: monospace;
+}
+#titleForm {
+    font-size: 2rem;
+    padding: 10px;
+    border: 3px solid steelblue;
+    margin: 30px 30px 30px 140px;
+    font-family: monospace;
+    background-color: white;
+}
+#typesForm {
+    font-size: 2rem;
+    padding: 10px;
+    border: 3px solid steelblue;
+    margin: 30px;
+    font-family: monospace;
+
+}
+#priorityFormLabel {
+    font-size: 2rem;
+    padding: 10px;
+    border: 3px solid steelblue;
+    margin: 30px 0 30px 30px;
+    background-color: white;
+    font-family: monospace;
+
+}
+#priorityForm {
+    padding: 10px ;
+    margin: 30px 30px 30px 0;
+}
+#plabel {
+    font-size: 2rem;
+    border: 3px solid steelblue;
+    padding: 12px 20px;
+    background-color: white;
+    font-family: monospace;
+
+}
+#dateForm {
+    font-size: 2rem;
+    padding: 10px;
+    border: 3px solid steelblue;
+    margin: 30px;
+    font-family: monospace;
+}
+#clearButton {
+    font-size: 2rem;
+    padding: 10px;
+    border: 3px solid steelblue;
+    margin: 30px;  
+    font-family: monospace;
+    background-color: white;
+}
+#addButton {
+    font-size: 2rem;
+    padding: 10px;
+    border: 3px solid steelblue;
+    margin: 30px;
+    font-family: monospace;
+    background-color: white;
+}
+
+
+/* Error Message */
+#error {
+    visibility: hidden;
+    text-align: center;
+    font-size: 2rem;
+    color: red;
+    margin: 20px 0;
+    font-family: monospace;
+}
+
+
+/* General CSS */
+body {
+    background-color: lightgray;
+}
+
+
+/* Clear Hack */
+.clear:after {
+    content: "";
+    display: table;
+    clear: both;
+}

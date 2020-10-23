@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!-- Created by Professor Wergeles for CS2830 at the University of Missouri -->
+
+<!-- References: 
+        1) http://www.w3schools.com/js/js_scope.asp
+-->
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>JavaScript Scope</title>
+		<link rel="stylesheet" type="text/css" href="app.css">
+		<script>
+            /*
+                JavaScript has function-level scope
+                
+                Any var declared in  a function is local to that function
+                Any var declared outside a functions is in the global namespace
+            */
+
+            // Global Variable "pokemon"
+			var pokemon = "Pikachu"; 
+
+            // It is in scope here
+			console.log("First log: " + pokemon); 
+
+            // "trainer" was defined in this function
+			function pageLoaded() {
+                console.log("Second log: " + pokemon);
+                
+                // Local variable
+                var trainer = "Nick";
+                
+                console.log("Third log: " + trainer);
+            }
+
+			console.log("Forth log: " + pokemon); 
+
+			console.log("Fifth log: " + trainer);
+			
+		</script>
+	</head>
+	<body onload="pageLoaded()">
+		<div id="animateMe">
+			<p>Do a barrel roll!</p>
+		</div>
+		<script>
+            console.log("Sixth log: " + pokemon); 
+
+			console.log("Seventh log: " + trainer);
+        </script>	
+	</body>
+</html>
