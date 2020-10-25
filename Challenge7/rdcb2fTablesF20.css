@@ -12,56 +12,8 @@
     src: url(Fonts/Mitr/Mitr-Regular.ttf);
 }
 
-/* Nav Bar CSS Items */
-#navBar {
-    background-color: dodgerblue;
-    position: fixed;
-    width: 100%;
-    z-index: 3;
-    margin: 0 auto;
-    border: 2px solid black;
-}
-
-.navBarItem {
-    font-size: 35px;
-    text-align: center;
-    width: 24.5%;
-    font-family: monospace;
-    
-    float: left;
-}
-
-#navBarMiddleLeft {
-    border-right: 4px solid black;
-    border-left: 4px solid black;
-}
-
-#navBarMiddleRight {
-    border-right: 4px solid black;
-}
-
-
-.navBarLinks {
-    text-decoration: none;
-    color: black;
-}
-
-.currentNavLink {
-    color: white;
-    text-decoration: underline;
-}
 
 /* Table Head Items */
-#Classes th, #Classes td {
-    
-    /*
-    border: 3px solid black;
-    padding: 10px 20px;
-    font-size: 18pt;
-    height: 50px;
-    */
-}
-
 table#Classes {
     font-family: primaryFont, monospace;
 }
@@ -134,17 +86,20 @@ table#Classes {
     padding: 10px;
     box-shadow: 0 0 30px 20px slategray;
     background-color: lightblue;
-    overflow: hidden;
 }
 .columns {
     width: 30%;
     padding: 10px;
     margin: 10px;
     text-align: center;
-    display: inline-block;
+    /* display: inline-block; */
     overflow: hidden;
 
     float: left;
+}
+
+.columns:hover {
+    overflow: visible;
 }
 
 div.columns h3 {
@@ -170,7 +125,6 @@ div.columns p {
 #bodyID {
     background-color: lightgray;
 }
-
 
 
 /* Clear Hack */

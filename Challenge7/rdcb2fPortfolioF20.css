@@ -11,6 +11,7 @@
 
 
 div #selfPhoto {
+    
     max-width: 40%;
     display: block;
     margin-left: auto;
@@ -18,33 +19,43 @@ div #selfPhoto {
     position: relative;
     border: 2px solid black;
     z-index: 2;
+    
 }
 
 h3 {
+    
     margin-top: 20px;
     margin-bottom: 20px;
     text-align: center;
     position: relative;
     color: black;
     font-size: 30px;
+    
 }
 
 .mainPara {
+    
     text-align: center;
     font-size: 24px;
     color: darkslategray;
     position: relative;
+    
 }
 
 body {
+    
     background-color: lightgray;
+    
 }
 
 .parentButton {
+    
     text-align: center;
+    
 }
 
 .infoButtons {
+    
     text-align: center;
     font-size: 30px;
     border: 2px solid black;
@@ -53,22 +64,29 @@ body {
     display: inline-block;
     width: 150px;
     position: relative;
+
 }
 
 #ResumeButton {
+    
     bottom: 19px;
     height: 45px;
+    
 }
 
 #GitHubPhoto {
+    
     width: 110px;
     padding-left: 20px;
     padding-right: 20px;
+    
 }
 
 #LinkedInPhoto {
+    
     width: 110px;
     padding-left: 20px;
     padding-right: 20px;
     height: 45px;
+
 }

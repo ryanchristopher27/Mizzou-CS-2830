@@ -1,0 +1,175 @@
+<!--
+    Name: Ryan Christopher
+    Pawprint: rdcb2f
+    Date: 9/17/2020
+    Challenge: Tables F20
+
+    Main Purpose: To create a table and customize it to fit the web page. Also, reimplement my knowledge on wrapper divs and floating elements.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" type="text/css" href="rdcb2fTablesF20.css">
+        <link rel="stylesheet" type="text/css" href="navBar.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+        <title>rdcb2f Tables F20</title>
+    </head>
+    <body id="bodyID">
+        
+        <!-- Nav Bar -->
+        <div id="navBar" class="clear">
+            
+            <div class="navBarItem">
+                <a href="rdcb2fPortfolioF20.html" target="_blank" class="navBarLinks">Ryan Christopher</a>
+            </div>
+    
+            <div class="navBarItem" id="navBarMiddleLeft">
+                <a href="rdcb2fColumnsF20.html" target="_blank" class="navBarLinks">Skills</a>
+            </div>
+            
+            <div class="navBarItem" id="navBarMiddleRight">
+                <a href="rdcb2fTablesF20.html" target="_blank" class="navBarLinks currentNavLink">Classes Taken</a>
+            </div>
+            
+            <div class="navBarItem">
+                <a href="rdcb2fProjectsF20.html" target="_blank" class="navBarLinks">Projects</a>
+            </div>
+            
+        </div>
+        
+        <!--Line Breaks to bring the Skills Div below the nav bar-->
+        <br><br><br><br><br>
+        
+        <!-- Classes Table -->
+        <table class="table" id="Classes">
+            <thead>
+                <tr>
+                    <th colspan="7" class="mainHeader">My Course History</th>
+                </tr>
+
+                <tr class="schoolHeader">
+                    <th colspan="7">
+                        <span id="mizTitle">University of Missouri</span>
+                        <img id="mizPhoto" src="Additional Files/mu-tiger.png" alt="Mizzou">
+                    </th>   
+
+                </tr>
+
+                <tr class="rowHeader">
+                    <th>Department</th>
+                    <th>Course</th>
+                    <th>Description</th>
+                    <th>Term</th>
+                    <th>Grade</th>
+                    <th>Units</th>
+                    <th>Projects</th>
+                </tr>   
+            </thead>
+            
+            <tbody>
+                <tr class="oddRows">
+                    <td rowspan="4" id="departmentGroup1">Computer Science</td>
+                    <td>CS 1000</td>
+                    <td>Introduction to Computer Science</td>
+                    <td>Fall 2019</td>
+                    <td>A</td>
+                    <td>1</td>
+                    <td>Future of CS Essay</td>
+                </tr>
+                
+                <tr class="evenRows">
+                    <td>CS 1050</td>
+                    <td>Introduction to Programming and Coding in C; Specifically Pointers and Pointer Arithmatic</td>
+                    <td>Fall 2019</td>
+                    <td>B</td>
+                    <td>4</td>
+                    <td>Dungeons and Dragons Simulator</td>
+                </tr>
+                
+                <tr class="oddRows">
+                    <td>CS 2050</td>
+                    <td>Further lessons over C Coding; Specifically Linked Lists and Trees</td>
+                    <td>Spring 2020</td>
+                    <td>A</td>
+                    <td>4</td>
+                    <td>N/A</td>
+                </tr>
+                
+                <tr class="evenRows">
+                    <td>CS 2270</td>
+                    <td>Introduction to Digital Logic; Specifically Binary, Matrices, and Gates</td>
+                    <td>Spring 2020</td>
+                    <td>A-</td>
+                    <td>3</td>
+                    <td>N/A</td>
+                </tr>
+                
+                <tr class="oddRows">
+                    <td rowspan="2" id="departmentGroup2">Math</td>
+                    <td>Math 1500 Calc 1</td>
+                    <td>Introduction to Calculus; Specifically Derivatives</td>
+                    <td>Fall 2019</td>
+                    <td>A</td>
+                    <td>5</td>
+                    <td>N/A</td>
+                </tr>
+                
+                <tr class="evenRows">
+                    <td>Math 1500 Calc 2</td>
+                    <td>Further lessons over Calculus; Specifically Integrals</td>
+                    <td>Spring 2020</td>
+                    <td>A</td>
+                    <td>5</td>
+                    <td>N/A</td>
+                </tr>
+                
+                <tr class="oddRows">
+                    <td id="departmentGroup3">Communication</td>
+                    <td>Comm 1200 Public Speaking</td>
+                    <td>Introduction to public speaking; Specifically how to write and perform speeches in front of an audience</td>
+                    <td>Fall 2020</td>
+                    <td>N/A</td>
+                    <td>3</td>
+                    <td>In Progress...</td>
+                </tr>
+                
+            </tbody>
+
+        </table>
+        
+        <br>
+        
+        <!-- CSS Card -->
+        <div id="mainWrapper" class="clear">
+            
+            <div class="columns" id="col1">
+                <img id="selfPhoto" src="Additional Files/selfpicture.JPEG" alt="Ryan Christopher">
+            </div>
+            
+            <div class="columns" id="col2">
+                <br><br><br><br>
+                <h3>Ryan Christopher</h3>
+                <hr>
+                <p>Computer Science | Sophomore</p>
+                <p>Total Credits | 54 h.</p>
+            </div>
+            
+            <div class="columns" id="col3">
+                <br><br><br><br>
+                <h3>Contact</h3>
+                <hr>
+                <p>email: ryandchristopher27@gmail.com</p>
+                <p>phone: (417)-839-1614</p>
+            </div>
+            
+        </div>
+        
+    </body>
+</html>
