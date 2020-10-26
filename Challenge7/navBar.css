@@ -44,3 +44,10 @@
     color: white;
     text-decoration: underline;
 }
+
+.navBarItem:hover {
+    background-color: darkblue;
+}
+.navBarLinks:hover {
+    color: lightgray;
+}
