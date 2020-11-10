@@ -1,0 +1,124 @@
+/*
+    Name: Ryan Christopher
+    Pawprint: rdcb2f
+    Date: October 30, 2020
+    Challenge: PHP F20
+
+    CSS File
+*/
+
+/* Main Wrapper Contents */
+#wrapperDiv {
+    width: 70%;
+    min-height: 60vh;
+    background-color: lightgray;
+    border: 2px solid black;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 20px;
+    font-family: monospace;
+    box-shadow: 0 0 20px 40px slateblue;
+}
+
+#phpTitle {
+    font-size: 60px;
+    color: black;
+}
+
+.horRule {
+    border-bottom: 2px solid black;
+    margin: 20px;
+    box-shadow: 0 0 5px 5px slateblue;
+}
+
+#functionTitle {
+    font-size: 40px;
+    font-family: monospace;
+    color: black;
+}
+
+#dropDown {
+    font-size: 30px;
+    font-family: monospace;
+    background-color: lightblue;
+    color: black;
+    margin-bottom: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 5px slateblue;
+}
+
+
+/* Function Wrapper Contents */
+.functionWrapper {
+    width: 50%;
+    height: 200px;
+    background-color: lightblue;
+    border: 2px solid black;
+    margin: 0 auto;
+    margin-top: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 5px 10px slateblue;
+}
+
+.functionTitle {
+    font-size: 30px;
+    margin: 20px;
+}
+
+#nameFcnt {
+    display: none;
+}
+
+#hammFcnt {
+    display: none;
+}
+
+#passFcnt {
+    display: none;
+}
+
+#listFcnt {
+    display: none;
+}
+
+#cylFcnt {
+    display: none;
+}
+
+
+/* Buttons */
+.textInput {
+    font-size: 20px;
+    font-family: monospace;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.button {
+    font-size: 20px;
+    font-family: monospace;
+    margin: 15px 2px;
+    width: 250px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.clearB {
+    background-color: red;
+    color: black;
+}
+
+.submitB {
+    background-color: lightgreen;
+    color: black;
+}
+
+#hammNumber {
+    width: 505px;
+}
+
+/* General */
+body {
+    background-color: lightblue;
+}

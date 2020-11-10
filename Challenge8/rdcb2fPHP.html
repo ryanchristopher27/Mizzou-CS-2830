@@ -1,0 +1,119 @@
+<!--
+    Name: Ryan Christopher
+    Pawprint: rdcb2f
+    Date: October 30, 2020
+    Challenge: PHP F20
+
+    HTML File
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta charset="UTF-8">
+
+        <title>PHP F20 rdcb2f</title>
+
+        <link rel="stylesheet" type="text/css" href="rdcb2fPHPF20.css">
+
+        <script src="rdcb2fPHPScriptFile.js"></script>
+
+    </head>
+
+    <body>
+
+        <br><br>
+
+        <div id="wrapperDiv">
+            <h1 id="phpTitle">PHP Playground</h1>
+            <hr class="horRule">
+
+            <h3 id="functionTitle">Function Section</h3>
+
+            <select id="dropDown" onchange="showAndHideDivs()">
+                <option value="default" disabled selected>Select A Function</option>
+                <option value="Name">Name:</option>
+                <option value="HammingNumber">Hamming Number:</option>
+                <option value="PasswordSim">Password Simulation:</option>
+                <option value="ListCreator">List Creator:</option>
+                <option value="CylinderSurfaceArea">Cylinder Surface Area:</option>
+            </select>
+            
+            <!-- Name Function -->
+            <div id="nameFcnt" class="functionWrapper">
+                <h4 class="functionTitle">Name Function</h4>
+
+                <form action="rdcb2fPHPFile.php" method="GET">
+                    <input type="text" id="firstName" class="textInput" name="firstName" placeholder="First Name" required>
+                    <input type="text" id="lastName" class="textInput" name="lastName" placeholder="Last Name" required>
+
+                    <br>
+                    
+                    <button type="button" class="button clearB" onclick="clearForm()">Clear</button>
+                    <input type="submit" class="button submitB" value="Submit">
+                </form>
+            </div>
+
+            <!-- Hamming Number Function -->
+            <div id="hammFcnt" class="functionWrapper">
+                <h4 class="functionTitle">Hamming Number Function</h4>
+
+                <form action="rdcb2fPHPFile.php" method="GET">
+                    <input type="number" id="hammNumber" class="textInput" name="hammNumber" placeholder="Provide a Number" required>
+
+                    <br>
+                    
+                    <button type="button" class="button clearB" onclick="clearForm()">Clear</button>
+                    <input type="submit" class="button submitB" value="Submit">
+                </form>
+            </div>
+
+            <!-- Password Function -->
+            <div id="passFcnt" class="functionWrapper">
+                <h4 class="functionTitle">Password Simulator Function</h4>
+
+                <form action="rdcb2fPHPFile.php" method="POST">
+                    <input type="text" id="Username" class="textInput" name="Username" placeholder="Username" required>
+                    <input type="password" id="Password" class="textInput" name="Password" placeholder="Password" required>
+
+                    <br>
+                    
+                    <button type="button" class="button clearB" onclick="clearForm()">Clear</button>
+                    <input type="submit" class="button submitB" value="Submit">
+                </form>
+            </div>
+
+            <!-- List Function -->
+            <div id="listFcnt" class="functionWrapper">
+                <h4 class="functionTitle">List Creator Function</h4>
+
+                <form action="rdcb2fPHPFile.php" method="GET">
+                    <input type="text" id="valueOne" class="textInput" name="valueOne" placeholder="First Singular Value" maxlength="1" required>
+                    <input type="text" id="valueTwo" class="textInput" name="valueTwo" placeholder="Second Singular Value" maxlength="1" required>
+
+                    <br>
+                    
+                    <button type="button" class="button clearB" onclick="clearForm()">Clear</button>
+                    <input type="submit" class="button submitB" value="Submit">
+                </form>
+            </div>
+
+            <!-- Cylinder Surface Area Function -->
+            <div id="cylFcnt" class="functionWrapper">
+                <h4 class="functionTitle">Cylinder Surface Area Function</h4>
+
+                <form action="rdcb2fPHPFile.php" method="GET">
+                    <input type="number" id="Height" class="textInput" name="Height" placeholder="Enter Height" required>
+                    <input type="number" id="Radius" class="textInput" name="Radius" placeholder="Enter Radius" required>
+
+                    <br>
+                    
+                    <button type="button" class="button clearB" onclick="clearForm()">Clear</button>
+                    <input type="submit" class="button submitB" value="Submit">
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
+
