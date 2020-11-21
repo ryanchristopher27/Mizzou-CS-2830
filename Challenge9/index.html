@@ -1,0 +1,86 @@
+<!--
+    Name: Ryan Christopher
+    Pawprint: rdcb2f
+    Date: November 20, 2020
+    Challenge: AJAX F20
+
+    NASA API Key: Y54VfEECDQA5b7M2w6Pga2U4YgqXr0d3NEA4L26p
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta charset="UTF-8">
+        <title>rdcb2f AJAX F20</title>
+        <link rel="stylesheet" type="text/css" href="rdcb2fAJAXF20.css">
+        <!-- <script src="rdcb2fAJAXF20.js"></script> -->
+
+    </head>
+    <body onload="getManifest()">
+
+        <a href="../rdcb2fProjectsF20.html" class="backButton" target="_blank">Back to Projects</a>
+
+        <div id="wrapperDiv" class="clear">
+            <h1 id="wrapperTitle">MARS EXPLORER</h1>
+
+            <div id="selectionDiv">
+
+            
+                <h5 class="formTitles">Martian Sol</h5>
+                <input type="number" name="martianSol" id="martianSol" class="formInput" value=""  onchange="updateCam()" required>
+
+                <h5 class="formTitles">Camera</h5>
+                <p class="camDes">Only Cameras with Photos Available</p>
+                <select id="camera" class="formInput" required>
+                    <option value="" selected disabled>Select A Camera</option>
+                    <option value="FHAZ" disabled>Front Hazard Avoidance Camera</option>
+                    <option value="MAST" disabled>Mast Camera</option>
+                    <option value="NAVCAM" disabled>Navigation Camera</option>
+                </select>
+
+                <h5 class="formTitles">Submit</h5>
+                <button class="formButton" onclick="getContent()">Query API</button>
+
+                <!-- <h5 class="loadIcon"></h5> -->
+
+            </div>
+
+            <div class="arrowDiv">
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            </div>
+
+            <div id="photoDiv">
+                <!-- <h5 class="loadIcon">Loading...</h5> -->
+            </div>
+
+            <div class="arrowDiv">
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+
+            <div id="roverDiv">
+                <h5 class="formTitles">Rover Data</h5>
+                <select id="rover" class="formInput" required>
+                    <option value="" selected disabled>Select A Rover</option>
+                    <option value="Curiosity">Curiosity</option>
+                    <option value="Opportunity">Opportunity</option>
+                    <option value="Spirit">Spirit</option>
+                </select>
+
+                <h5 class="formTitles">Submit</h5>
+                <button class="formButton" onclick="getData()">Display Data</button>
+
+                <div id="loader">
+                    <div class="loadNode"></div>
+                    <div class="loadNode"></div>
+                    <div class="loadNode"></div>
+                </div>
+                <div id="roverData">
+                    
+                </div>
+            </div>
+        </div>
+
+        <script src="rdcb2fAJAXF20.js"></script>
+    </body>
+</html>
