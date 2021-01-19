@@ -1,0 +1,332 @@
+/*
+    Name: Ryan Christopher
+    Pawprint: rdcb2f
+    Date: December 11, 2020
+    Challenge: Final Project
+
+    Type: CSS
+*/
+
+@font-face {
+    font-family: 'Cinzel';
+    src: url(FinalFonts/Cinzel-Regular.ttf);
+}
+
+/* General CSS */
+.clear:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.pageTitle {
+    width: 100%;
+    margin: 10px auto 20px;
+    text-align: center;
+    font-size: 80px;
+    font-family: "Cinzel", monospace;
+}
+body {
+    background-color: rgba(255, 255, 255, 0.781);
+}
+
+/* Index Page CSS */
+#indexShieldDiv {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+.indexShield {
+    display: inline;
+    height: 100px;
+    margin-top: 50px 50px 0;
+}
+#indexPageTitle {
+    width: 100%;
+    margin: 10px auto 20px;
+    display: inline;
+    text-align: center;
+    font-size: 80px;
+    font-family: "Cinzel", monospace;
+}
+#indexWrapper {
+    width: 100%;
+    margin: 40px auto;
+    /* border: 5px solid black;     */
+    /* border-radius: 25px; */
+    background-color: lightblue;
+}
+#indexTextDiv {
+    width: 49.8%;
+    text-align: center;
+    /* border: 2px solid black; */
+
+    float: left;
+}
+#indexQFTitle {
+    margin-bottom: 10px;
+}
+#indexQuickFacts {
+    margin: 0;
+    font-size: 25px;
+    font-family: "Cinzel", monospace;
+    border: 2px solid black;
+}
+#indexQFButton {
+    margin: 0;
+    font-size: 25px;
+    font-family: "Cinzel", monospace;
+    background-color: white;
+    border: 2px solid black;
+}
+#indexQFInfo {
+    margin-top: 10px;
+}
+.indexhr {
+    height: 2px;
+    background-color: black;
+    border: none;
+}
+#indexPhotoDiv {
+    width: 50%;
+    text-align: center;
+    /* border: 2px solid black; */
+    overflow: hidden;
+
+    float: left;
+}
+#indexPDTPic {
+    border: 10px solid black;
+    /* border-radius: 25px; */
+    overflow: hidden;
+}
+.indexDivTitles {
+    font-size: 40px;
+    font-family: "Cinzel", monospace;
+
+}
+#indexPhotoTitle {
+    position: absolute;
+    width: 50%;
+    /* text-align: ceter; */
+    font-size: 40px;
+    color: black;
+    /* left: 50%; */
+    /* background-color: black; */
+    /* border-radius: 25px; */
+}
+.indexInfoDiv {
+    font-size: 30px;
+    font-family: "Cinzel", monospace;
+    margin: 10px;
+}
+#indexExecWrapper {
+    width: 90%;
+    margin: 20px auto;
+    border: 5px solid black;
+    border-radius: 25px;
+    padding-bottom: 20px;
+    background-color: lightblue;
+}
+#indexExecTitle {
+    text-align: center;
+    font-size: 40px;
+    font-family: "Cinzel", monospace;
+}
+.indexExecColumns {
+    width: 24.9%;
+    text-align: center;
+
+    float: left;
+}
+.indexExecNames {
+    font-size: 30px;
+    font-family: "Cinzel", monospace
+}
+.indexExecDesc {
+    font-size: 20px;
+    font-family: "Cinzel", monospace;
+    /* margin-bottom: 15px; */
+}
+
+/* Gallery Page CSS */
+#galleryWrapper {
+    width: 1660px;
+    /* border: 5px solid black; */
+    margin: 0 auto;
+    text-align: center;
+    background-color: lightblue;
+    border-radius: 20px;
+}
+.galleryPhotos {
+    /* margin-bottom: 10px; */
+    
+
+    float: left;
+}
+.galleryImage {
+    width: 800px;
+    margin: 0 10px;
+    border: 5px solid black;
+    border-radius: 15px;
+    overflow: hidden;
+    z-index: -1;
+}
+.galleryImage:hover {
+    box-shadow: 0 0 20px 20px black;
+    z-index: 10;
+}
+.galleryImageTitle {
+    font-size: 30px;
+    font-family: "Cinzel", monospace;
+    margin-bottom: 30px;
+}
+
+/* HouseTour Page CSS */
+.tourVideoDiv {
+    width: 1160px;
+    margin: 50px auto;
+    margin-bottom: 100px;
+    text-align: center;
+    border: 5px solid black;
+    border-radius: 25px;
+    background-color: lightblue;
+}
+.tourVideoDiv:hover {
+    box-shadow: 0 0 30px 30px black;
+}
+.tourVideo {
+    width: 1120px;
+    height: 630px;
+    margin: 15px;
+}
+.tourVideoTitle {
+    font-size: 40px;
+    font-family: "Cinzel", monospace;
+    margin: 20px;
+    /* margin-bottom: 50px; */
+}
+
+/* Login Page CSS */
+#loginContainerDiv {
+    margin: 0 auto;
+    width: 90%;
+
+    display: none;
+}
+.loginLogSign {
+    display: inline;
+    padding: 0 15px;
+    font-size: 30px;
+    font-family: "Cinzel", monospace;
+    /* border:  2px solid rgb(5, 5, 73); */
+    border-radius: 5px;
+    color: rgb(5, 5, 73);
+    /* background-color: rgb(5, 5, 73); */
+}
+#logoutButton {
+    display: inline;
+    /* margin-left: 80%; */
+    background-color: red;
+    color: white;
+}
+#logoutButton:hover {
+    cursor: pointer;
+}
+#loginWrapperDiv {
+    width: 100%;
+    margin: 0 auto 50px;
+    text-align: center;
+    /* border: 2px solid black; */
+}
+.loginColumns {
+    width: 33%;
+    border: 2px solid black;
+
+    float: left;
+}
+.loginRoster {
+    margin: 0;
+    font-size: 30px;
+    font-family: "Cinzel", monospace;
+    /* color: rgb(5, 5, 73); */
+}
+#loginFormDiv {
+    width: 500px;
+    margin: 50px auto;
+    text-align: center;
+    border: 5px solid black;
+    border-radius: 25px;
+    background-color: lightblue;
+}
+.loginInfoDiv {
+    margin: 30px;
+    font-size: 30px;
+    font-family: monospace;
+}
+.loginInput {
+    font-size: 30px;
+    font-family: monospace;
+    border-radius: 10px;
+}
+.loginSubmit {
+    font-size: 30px;
+    font-family: monospace;
+    border-radius: 10px;
+}
+#emailDiv {
+    width: 100%;
+    height: 350px;
+    text-align: center;
+    font-size: 30px;
+    font-family: "Cinzel", monospace;
+    background-color: lightblue;
+}
+#emailTitle {
+    /* margin-top: 100px; */
+    padding-top: 100px;
+    font-size: 40px;
+    font-family: "Cinzel", monospace;
+}
+#email {
+    /* height: 30px; */
+    font-size: 30px;
+    font-family: "Cinzel", monospace;
+    width: 400px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+/* Menu Page CSS */
+#menu {
+    background-color: rgb(5, 5, 73);
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    margin: 0 auto;
+    padding: 0;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+.menuItem {
+    font-size: 35px;
+    text-align: center;
+    width: 24.8%;
+    font-family: "Cinzel", monospace;
+
+    float: left;
+}
+.menuItem:hover {
+    background-color: lightblue;
+    color: black;
+}
+.menuLinks {
+    text-decoration: none;
+    color: white;
+}
+.menuLinks:hover {
+    color: black;
+}
+#currentMenuLink {
+    color: white;
+    text-decoration: underline;
+}

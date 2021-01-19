@@ -1,0 +1,53 @@
+/*
+    Name: Ryan Christopher
+    Pawprint: rdcb2f
+    Date: 10 / 25 / 2020
+    Challenge: 7 Web Servers
+
+    Navigation Bar CSS File
+*/
+
+#navBar {
+    background-color: dodgerblue;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    margin: 0 auto;
+    border: 2px solid black;
+}
+
+.navBarItem {
+    font-size: 35px;
+    text-align: center;
+    width: 24.5%;
+    font-family: monospace;
+    
+    float: left;
+}
+
+#navBarMiddleLeft {
+    border-right: 4px solid black;
+    border-left: 4px solid black;
+}
+
+#navBarMiddleRight {
+    border-right: 4px solid black;
+}
+
+
+.navBarLinks {
+    text-decoration: none;
+    color: black;
+}
+
+.currentNavLink {
+    color: white;
+    text-decoration: underline;
+}
+
+.navBarItem:hover {
+    background-color: darkblue;
+}
+.navBarLinks:hover {
+    color: lightgray;
+}
